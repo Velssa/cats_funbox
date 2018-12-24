@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+@font-face {
+    font-family: Trebuchet; /* Гарнитура шрифта */
+    src: url("../fonts/Exo2.0-Thin.otf"); /* Путь к файлу со шрифтом */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    overflow: auto;
+    font-family: "Trebuchet MS";
+}
+
+.container {
+    min-width: 100%;
+    min-height: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../images/bg_full.png");
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url("../images/bg_full.png");
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url("../images/bg_full.png");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url("../images/bg_full.png");
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+.top-title {
+    text-shadow: 0 1px 0 #000000;
+    color: #ffffff;
+    font-family: Trebuchet;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 23px;
+    margin-top: 25px;
+}
+
+.cards {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.cards__one {
+    position: relative;
+    cursor: pointer;
+}
+
+.no_cursor {
+    cursor: auto;
+}
+
+.cards__one_border {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    border-radius: 14px;
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+}
+
+.bg_default {
+    background-color: #1698d9;
+	transition: 1s;
+}
+
+.cards__one:hover .bg_default {
+    background-color: #2ea8e6;
+	transition: 1s;
+}
+
+.bg_select {
+    background-color: #d91667;
+	transition: 1s;
+}
+
+.cards__one:hover .bg_select {
+    background-color: #e62e7a;
+	transition: 1s;
+}
+
+.bg_disabled {
+    background-color: #b3b3b3;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.text_disabled {
+    opacity: 0.5;
+    color: #b3b3b3 !important;
+}
+
+.cards__one_content {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 312px;
+    height: 472px;
+    background-color: #f2f2f2;
+    border-radius: 11px;
+    -webkit-clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+    clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+}
+
+.cards__one_title_top {
+    position: relative;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 17px;
+    margin-left: 45px;
+}
+
+.title_top_select {
+    position: relative;
+    color: #e62e7a;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 17px;
+    margin-left: 45px;
+}
+
+.cards__one_title {
+    color: #000000;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-left: 42px;
+}
+
+.cards__one_title_bottom {
+    color: #000000;
+    font-family: "Trebuchet MS";
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: -2px;
+    margin-left: 45px;
+}
+
+.cards__one_text {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 15px;
+    margin-left: 45px;
+}
+
+.cards__one_text span {
+    font-weight: 700;
+}
+
+
+.cards__one_image {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/card_cat.png") no-repeat left bottom;
+}
+
+.cards__one_point {
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.cards__one_point_num {
+    color: #ffffff;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.cards__one_point_lot {
+    color: #ffffff;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: -8px;
+}
+
+.cards__one_bottom-text {
+    text-shadow: 0 1px 0 #000000;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cards__one_bottom-text a {
+    color: #1698d9;
+    border-bottom: 1px dashed #1698d9;
+    text-decoration: none;
+}
+
+.cards__one_bottom-text a:hover, .cards__one_bottom-text a:hover {
+    border-bottom: 1px dashed transparent;
+}
+
+.cards__one_bottom-text-disabled {
+    text-shadow: 0 1px 0 #000000;
+    color: #ffff66;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+
+    .card__box {
+        margin: 15px auto;
+        max-width: 320px;
+    }
+
+    .cards {
+        margin-bottom: 25px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+
+}
+
+@media (max-width: 1024px) and (min-width: 655px) {
+
+    .card__box:first-child {
+        padding: 0 200px;
+    }
+}
+
+
+
+@media (max-width: 426px) {
+    .container {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    .cards {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
